@@ -1,0 +1,6 @@
+@Bombolero.Api_HostAddress = http://localhost:5231
+
+GET {{Bombolero.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

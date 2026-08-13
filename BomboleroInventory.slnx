@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Bombolero.Api/Bombolero.Api.csproj" />
+    <Project Path="src/Bombolero.Core/Bombolero.Core.csproj" />
+    <Project Path="src/Bombolero.Infrastructure/Bombolero.Infrastructure.csproj" />
+  </Folder>
+</Solution>
