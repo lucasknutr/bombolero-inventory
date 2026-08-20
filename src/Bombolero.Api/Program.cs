@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using Bombolero.Infrastructure.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
+// database configuration
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<BomboleroDbContext>(options => 
+        options.UseNpgsql(connectionString));
+
 // Add services to the container.
-builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -16,6 +24,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
-app.MapControllers();
 
 app.Run();
