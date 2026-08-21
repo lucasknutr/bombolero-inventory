@@ -23,6 +23,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
+
+// Not needed since we're not using JWT tokens right now
+// app.UseAuthorization();
+
+Bombolero.Api.Features.Ingredients.CreateIngredient.MapEndpoint(app);
 
 app.Run();
